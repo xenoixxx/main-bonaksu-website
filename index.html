@@ -728,7 +728,7 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 	].map(function (p) { return { s: IMG + '2025/11/' + p[0], n: p[1] }; }).concat([
 		{ s: 'mc3d-logo.png', n: 'MC3D', fit: true }, { s: 'grind-on-logo.jpg', n: 'Grind On' }
 	]);
-	function src(path) { return /^(img\/|https?:)/.test(path) ? path : IMG + path; }
+	function src(path) { return /^(img\/|https?:)|^[^\/]+$/.test(path) ? path : IMG + path; }
 	function plogo(p, attrs) { return '<span class="plogo' + (p.fit ? ' fit' : '') + (attrs ? ' rv" ' + attrs : '"') + '><img src="' + p.s + '" alt="' + esc(p.n) + '" loading="lazy" onerror="this.parentNode.classList.add(\'txt\');this.parentNode.setAttribute(\'data-n\',this.alt);this.remove()"></span>'; }
 	var GALLERY = ['2025/10/476000481_1254342425624527_5714760567124490625_n-300x200.jpg', '2025/10/474859210_1249652026093567_6505063642502391066_n-225x300.jpg', '2025/10/475419663_1254334028958700_8316121326178183545_n-225x300.jpg', '2025/10/475775445_1254335375625232_3717573251221701621_n-300x200.jpg', '2025/10/475803921_1254337232291713_3454090812318131158_n-225x300.jpg', '2025/10/470463933_1231381167920653_128007793192214032_n-300x200.jpg', '2025/10/480856721_646495541222017_6803012126862779214_n-300x200.jpg', '2025/10/VALO-PH-3-copy-1-300x225.jpg', '2025/09/8-1-300x200.jpg'].map(function (f) { return IMG + f.replace(/-\d+x\d+(?=\.jpg$)/, ''); });
 
@@ -1237,4 +1237,3 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 </script>
 </body>
 </html>
-
