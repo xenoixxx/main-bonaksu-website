@@ -601,7 +601,7 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 			<a href="#/about" data-r="about">About</a>
 			<a href="https://news.bonaksugaming.com/" target="_blank" rel="noopener">News<span class="ext">↗</span></a>
 			<a href="#/shop" data-r="shop">Shop</a>
-			<a href="topup/">Top Up</a>
+			<a href="https://xenoixxx.github.io/topup-bonaksu/">Top Up</a>
 			<a href="#/team" data-r="team">Team</a>
 			<a href="#/contact" data-r="contact">Contact</a>
 		</nav>
@@ -618,7 +618,7 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 	<a href="#/about">About</a>
 	<a href="https://news.bonaksugaming.com/" target="_blank" rel="noopener">News ↗</a>
 	<a href="#/shop">Shop</a>
-	<a href="topup/">Top Up</a>
+	<a href="https://xenoixxx.github.io/topup-bonaksu/">Top Up</a>
 	<a href="#/team">Team</a>
 	<a href="#/contact">Contact</a>
 	<a class="btn" href="https://discord.gg/bonaksu" target="_blank" rel="noopener">Join Discord</a>
@@ -635,7 +635,7 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 				<div class="socials" id="ftSocials"></div>
 			</div>
 			<div><h4>Explore</h4><ul><li><a href="#/">Home</a></li><li><a href="#/about">About us</a></li><li><a href="#/team">Team</a></li><li><a href="#/contact">Contact</a></li></ul></div>
-			<div><h4>Bonaksu</h4><ul><li><a href="https://tournaments.bonaksugaming.com/" target="_blank" rel="noopener">Tournaments</a></li><li><a href="https://news.bonaksugaming.com/" target="_blank" rel="noopener">News</a></li><li><a href="#/shop">Shop</a></li><li><a href="topup/">Game top-up</a></li><li><a href="https://discord.gg/bonaksu" target="_blank" rel="noopener">Discord</a></li></ul></div>
+			<div><h4>Bonaksu</h4><ul><li><a href="https://tournaments.bonaksugaming.com/" target="_blank" rel="noopener">Tournaments</a></li><li><a href="https://news.bonaksugaming.com/" target="_blank" rel="noopener">News</a></li><li><a href="#/shop">Shop</a></li><li><a href="https://xenoixxx.github.io/topup-bonaksu/">Game top-up</a></li><li><a href="https://discord.gg/bonaksu" target="_blank" rel="noopener">Discord</a></li></ul></div>
 			<div><h4>Get in touch</h4><ul><li><a href="mailto:bonaksugaming@gmail.com">bonaksugaming@gmail.com</a></li><li><a href="tel:+639054285293">+63 905 428 5293</a></li><li><span class="mu">Philippines</span></li></ul></div>
 		</div>
 		<div class="fbottom"><span>© 2026 Bonaksu Gaming. All rights reserved.</span><span>Building connections through gaming</span></div>
@@ -694,10 +694,10 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 	];
 	// Valorant Inspired Collection: limited edition, sold out. Photos live in the local img/ folder.
 	var VALO = [
-		{ id: 'clove-jersey', n: 'Clove Inspired Jersey', c: 'Valorant Inspired', p: 800, i: 'img/valo-jersey-1.jpg', out: true, tag: 'Limited edition' },
-		{ id: 'jett-jersey', n: 'Jett Inspired Jersey', c: 'Valorant Inspired', p: 800, i: 'img/valo-jersey-2.jpg', out: true, tag: 'Limited edition' },
-		{ id: 'reyna-jersey', n: 'Reyna Inspired Jersey', c: 'Valorant Inspired', p: 800, i: 'img/valo-jersey-3.jpg', out: true, tag: 'Limited edition' },
-		{ id: 'viper-jersey', n: 'Viper Inspired Jersey', c: 'Valorant Inspired', p: 800, i: 'img/valo-jersey-4.jpg', out: true, tag: 'Limited edition' }
+		{ id: 'clove-jersey', n: 'Clove Inspired Jersey', c: 'Valorant Inspired', p: 800, i: 'valo-jersey-1.jpg', out: true, tag: 'Limited edition' },
+		{ id: 'jett-jersey', n: 'Jett Inspired Jersey', c: 'Valorant Inspired', p: 800, i: 'valo-jersey-2.jpg', out: true, tag: 'Limited edition' },
+		{ id: 'reyna-jersey', n: 'Reyna Inspired Jersey', c: 'Valorant Inspired', p: 800, i: 'valo-jersey-3.jpg', out: true, tag: 'Limited edition' },
+		{ id: 'viper-jersey', n: 'Viper Inspired Jersey', c: 'Valorant Inspired', p: 800, i: 'valo-jersey-4.jpg', out: true, tag: 'Limited edition' }
 	];
 	PRODUCTS = VALO.concat(PRODUCTS);
 	// official Valorant key art from playvalorant.com (agent sits on the right, which suits the tournaments band)
@@ -726,7 +726,7 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 		['partner-logo11.jpg', 'Partner'], ['partner-logo12-copy.jpg', 'Redragon'], ['partner-logo13-copy.jpg', 'Partner'],
 		['partner-logo14-copy.jpg', 'Quicky Top Up'], ['ran-logo.jpg', 'RAN Online Pinas']
 	].map(function (p) { return { s: IMG + '2025/11/' + p[0], n: p[1] }; }).concat([
-		{ s: 'img/mc3d-logo.png', n: 'MC3D', fit: true }, { s: 'img/grind-on-logo.jpg', n: 'Grind On' }
+		{ s: 'mc3d-logo.png', n: 'MC3D', fit: true }, { s: 'grind-on-logo.jpg', n: 'Grind On' }
 	]);
 	function src(path) { return /^(img\/|https?:)/.test(path) ? path : IMG + path; }
 	function plogo(p, attrs) { return '<span class="plogo' + (p.fit ? ' fit' : '') + (attrs ? ' rv" ' + attrs : '"') + '><img src="' + p.s + '" alt="' + esc(p.n) + '" loading="lazy" onerror="this.parentNode.classList.add(\'txt\');this.parentNode.setAttribute(\'data-n\',this.alt);this.remove()"></span>'; }
@@ -859,8 +859,8 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 			'<section class="sec"><div class="wrap co"><div style="display:grid;gap:20px">' +
 			'<div class="box rv"><h3><i>1</i>Your details</h3><div class="fgrid" id="cofields"><label class="fl"><span>Full name</span><input class="inp" name="name" autocomplete="name" placeholder="Juan Dela Cruz"></label><label class="fl"><span>Phone</span><input class="inp" name="phone" type="tel" autocomplete="tel" placeholder="09xx xxx xxxx"></label><label class="fl full"><span>Email</span><input class="inp" name="email" type="email" autocomplete="email" placeholder="you@email.com"></label><label class="fl full"><span>Shipping address</span><input class="inp" name="address" autocomplete="street-address" placeholder="Street, barangay, city, province"></label></div></div>' +
 			'<div class="box rv" style="--d:100ms"><h3><i>2</i>Payment</h3>' +
-			// real GCash QR goes in img/gcash-qr.png; without it we tell the buyer we'll send payment details
-			'<div class="gcash"><div class="qr"><img src="img/gcash-qr.png" alt="Bonaksu Gaming GCash QR" onerror="this.closest(\'.gcash\').classList.add(\'noqr\')"></div><div><b style="font-size:15px">Pay with GCash</b><ol class="steps"><li class="q">Scan the QR with your GCash app</li><li>Pay the exact total: <b style="color:#fff">₱' + total.toLocaleString('en-PH') + '</b></li><li>Enter the GCash reference number below and place your order</li></ol><p class="later">Place your order and we\'ll send the GCash payment details to your email.</p></div></div>' +
+			// real GCash QR goes in gcash-qr.png; without it we tell the buyer we'll send payment details
+			'<div class="gcash"><div class="qr"><img src="gcash-qr.png" alt="Bonaksu Gaming GCash QR" onerror="this.closest(\'.gcash\').classList.add(\'noqr\')"></div><div><b style="font-size:15px">Pay with GCash</b><ol class="steps"><li class="q">Scan the QR with your GCash app</li><li>Pay the exact total: <b style="color:#fff">₱' + total.toLocaleString('en-PH') + '</b></li><li>Enter the GCash reference number below and place your order</li></ol><p class="later">Place your order and we\'ll send the GCash payment details to your email.</p></div></div>' +
 			'<div class="fgrid" style="margin-top:14px"><label class="fl full"><span>GCash reference no. <small class="mu" style="letter-spacing:0;text-transform:none">(if already paid)</small></span><input class="inp" name="ref" inputmode="numeric" placeholder="13-digit reference"></label></div></div></div>' +
 			'<div class="box sum rv r" style="position:sticky;top:calc(var(--hh) + 24px)"><h3>Order summary</h3>' +
 			(items.length ? items.map(function (it) { return '<div class="line"><span>' + esc(it.p.n) + ' × ' + it.q + '</span><span>₱' + (it.p.p * it.q).toLocaleString('en-PH') + '</span></div>'; }).join('') : '<p class="mu">Your cart is empty. <a href="#/shop" style="color:var(--pink2)">Browse the shop</a>.</p>') +
@@ -1237,3 +1237,4 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 </script>
 </body>
 </html>
+
