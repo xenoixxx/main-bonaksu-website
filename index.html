@@ -690,7 +690,7 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 			<a href="#/about" data-r="about">About</a>
 			<a href="https://news.bonaksugaming.com/" target="_blank" rel="noopener">News<span class="ext">↗</span></a>
 			<a href="#/shop" data-r="shop">Shop</a>
-			<a href="https://xenoixxx.github.io/topup-bonaksu/">Top Up</a>
+			<!-- Top Up hidden until launch (next year): <a href="https://xenoixxx.github.io/topup-bonaksu/">Top Up</a> -->
 			<a href="#/team" data-r="team">Team</a>
 			<a href="#/contact" data-r="contact">Contact</a>
 		</nav>
@@ -707,7 +707,7 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 	<a href="#/about">About</a>
 	<a href="https://news.bonaksugaming.com/" target="_blank" rel="noopener">News ↗</a>
 	<a href="#/shop">Shop</a>
-	<a href="https://xenoixxx.github.io/topup-bonaksu/">Top Up</a>
+	<!-- Top Up hidden until launch: <a href="https://xenoixxx.github.io/topup-bonaksu/">Top Up</a> -->
 	<a href="#/team">Team</a>
 	<a href="#/players">Players</a>
 	<a href="#/contact">Contact</a>
@@ -725,7 +725,7 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 				<div class="socials" id="ftSocials"></div>
 			</div>
 			<div><h4>Explore</h4><ul><li><a href="#/">Home</a></li><li><a href="#/about">About us</a></li><li><a href="#/team">Team</a></li><li><a href="#/players">Players</a></li><li><a href="#/contact">Contact</a></li></ul></div>
-			<div><h4>Bonaksu</h4><ul><li><a href="https://tournaments.bonaksugaming.com/" target="_blank" rel="noopener">Tournaments</a></li><li><a href="https://news.bonaksugaming.com/" target="_blank" rel="noopener">News</a></li><li><a href="#/shop">Shop</a></li><li><a href="https://xenoixxx.github.io/topup-bonaksu/">Game top-up</a></li><li><a href="https://discord.gg/bonaksu" target="_blank" rel="noopener">Discord</a></li></ul></div>
+			<div><h4>Bonaksu</h4><ul><li><a href="https://tournaments.bonaksugaming.com/" target="_blank" rel="noopener">Tournaments</a></li><li><a href="https://news.bonaksugaming.com/" target="_blank" rel="noopener">News</a></li><li><a href="#/shop">Shop</a></li><!-- <li><a href="https://xenoixxx.github.io/topup-bonaksu/">Game top-up</a></li> --><li><a href="https://discord.gg/bonaksu" target="_blank" rel="noopener">Discord</a></li></ul></div>
 			<div><h4>Get in touch</h4><ul><li><a href="mailto:bonaksugaming@gmail.com">bonaksugaming@gmail.com</a></li><li><a href="tel:+639054285293">+63 905 428 5293</a></li><li><span class="mu">Philippines</span></li></ul></div>
 		</div>
 		<div class="fbottom"><span>© 2026 Bonaksu Gaming. All rights reserved.</span><span>Building connections through gaming</span></div>
@@ -795,30 +795,33 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 	// official Valorant key art from playvalorant.com (agent sits on the right, which suits the tournaments band)
 	var VALO_ART = 'https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/9167b57d3c081d04e75abe28387d87a27bb83953-3440x1020.jpg?accountingTag=VAL&fm=jpg&q=85&w=1800';
 	/* ---------- team + community player profiles ----------
-	   Template content for now (Lynde asked for Valorant agents as placeholders).
+	   Community players are template content for now (Valorant agents as placeholders).
 	   Each row: id, name, handle, role, group, agent uuid, colour, age, location, joined, games, bio, socials, highlights.
-	   Swap these for the real people when their info arrives; REAL_TEAM below keeps the current staff list. */
+	   Staff (TEAM) are the real Bonaksu staff; only the community players use agent templates until their info arrives. */
 	var AG = 'https://media.valorant-api.com/agents/';
 	var GAMES = { val: ['VALORANT', '#ff4655'], ml: ['Mobile Legends', '#3fa9f5'], lol: ['League of Legends', '#c89b3c'], cod: ['COD Mobile', '#9acd32'], gi: ['Genshin Impact', '#8fd3ff'], hok: ['Honor of Kings', '#e8b04a'], tft: ['TFT', '#b07cff'], mc: ['Minecraft', '#6cc04a'], apex: ['Apex Legends', '#da292a'], cs2: ['Counter-Strike 2', '#f5a623'], gta: ['GTA V Roleplay', '#26e0a0'], rbx: ['Roblox', '#e2e2e2'] };
 	function P(row, pl) {
 		return { id: row[0], n: row[1], h: row[2], r: row[3], g: row[4], u: row[5], c: row[6], age: row[7], loc: row[8], yr: row[9], games: row[10], bio: row[11], s: row[12], hl: row[13], rank: row[14] || '', pl: !!pl };
 	}
 	var TEAM = [
-		['brimstone', 'Brimstone', 'bg.brim', 'Founder', 'Leadership', '9f0d8ba9-4140-b941-57d3-a7ad57c6b417', '#363c4f', 34, 'Quezon City', 2021, ['val', 'gta', 'lol'], 'Started Bonaksu as a weekend lobby with friends. Now I run the whole operation, and I still call the orbital strike in scrims.', { facebook: 'bonaksugaming', x: 'bonaksugaming', discord: 'brim.bg' }, ['Founded Bonaksu Gaming', 'Hosted 100+ community tournaments', 'Grew the Discord past 17,000 members']],
-		['sage', 'Sage', 'bg.sage', 'Operations Manager', 'Leadership', '569fdd95-4d10-43ab-ca70-79becc718b46', '#1f5148', 27, 'Makati', 2021, ['val', 'gi'], 'Keeps every bracket, schedule and payout on track. If something breaks on event day, I am already fixing it.', { discord: 'sage.bg', instagram: 'bg.sage' }, ['Runs operations for every monthly tournament', 'Built the event checklist the whole team uses']],
-		['omen', 'Omen', 'bg.omen', 'Chief of Staff / Project Manager', 'Leadership', '8e253930-4c05-31dd-1b6c-968525494517', '#433178', 29, 'Pasig', 2022, ['val', 'cs2'], 'Plans the projects nobody sees until they launch. Quiet in voice chat, loud in the planning doc.', { discord: 'omen.bg', x: 'bg_omen' }, ['Led the website and shop relaunch', 'Coordinates staff across every team']],
-		['killjoy', 'Killjoy', 'bg.kj', 'Events Manager', 'Community', '1e58de9c-4950-5125-93e9-a0aee9f98746', '#522162', 24, 'Taguig', 2022, ['val', 'mc', 'tft'], 'Builds the events, sets up the overlays, and somehow always has a backup plan for the backup plan.', { discord: 'kj.bg', instagram: 'bg.killjoy', tiktok: 'bg.killjoy' }, ['Organised the Bonaksu All-Female VALORANT series', 'Ran on-ground events in Metro Manila']],
-		['skye', 'Skye', 'bg.skye', 'Community Lead', 'Community', '6f2a04ca-43e0-be17-7f36-b3908627744d', '#436a51', 26, 'Baguio', 2021, ['val', 'ml', 'gi'], 'Welcoming every new member and making sure nobody plays alone. Ask me about LFG nights.', { discord: 'skye.bg', facebook: 'bonaksugaming' }, ['Started weekly LFG nights', 'Welcomed thousands of new members']],
-		['cypher', 'Cypher', 'bg.cypher', 'Head Moderator', 'Community', '117ed9e3-49f3-6512-3ccf-0cada7e3823b', '#2f5078', 28, 'Cebu City', 2021, ['val', 'cs2'], 'I see everything in the server. Keeping things friendly, fair and spam-free.', { discord: 'cypher.bg', x: 'bg_cypher' }, ['Leads the moderator team', 'Wrote the server rules and report system']],
-		['gekko', 'Gekko', 'bg.gekko', 'Community Manager', 'Community', 'e370fa57-4757-3604-3648-499e1f642d3f', '#371c5c', 21, 'Las Piñas', 2023, ['val', 'ml', 'rbx'], 'Game nights, giveaways and bad puns. My buddies and I keep the general chat alive.', { discord: 'gekko.bg', tiktok: 'bg.gekko' }, ['Hosts weekly community game nights', 'Runs Discord giveaways']],
-		['clove', 'Clove', 'bg.clove', 'Community Manager', 'Community', '1dbf2edd-4729-0984-3115-daa5eed44993', '#4b1d80', 22, 'Iloilo City', 2024, ['val', 'gi', 'hok'], 'Making the community feel like home. Also the reason there is a Clove jersey.', { discord: 'clove.bg', instagram: 'bg.clove' }, ['Helped design the Valorant Inspired jerseys', 'Manages community feedback']],
-		['fade', 'Fade', 'bg.fade', 'Production Head', 'Production', 'dade69b4-4f5a-8528-247b-219e5a1facd6', '#1d2846', 30, 'Mandaluyong', 2022, ['val', 'apex'], 'Behind every stream overlay and highlight reel. If it is on screen, I probably touched it.', { discord: 'fade.bg', youtube: 'bonaksugaming' }, ['Leads broadcast production', 'Produced the tournament highlight reels']],
-		['kayo', 'KAY/O', 'bg.kayo', 'Production Staff', 'Production', '601dbbe7-43ce-be57-2a40-4abd24953621', '#1c2a69', 25, 'Caloocan', 2023, ['val', 'cs2', 'cod'], 'Observer and replay operator. I suppress bad camera angles.', { discord: 'kayo.bg', twitch: 'bonaksugaming' }, ['Observer for tournament streams', 'Runs instant replays']],
-		['tejo', 'Tejo', 'bg.tejo', 'Production Staff', 'Production', 'b444168c-4e35-8076-db47-ef9bf368f384', '#80451b', 31, 'Davao City', 2024, ['val', 'apex'], 'Graphics, thumbnails and posters. Precise, on time, every time.', { discord: 'tejo.bg', instagram: 'bg.tejo' }, ['Designs event posters and thumbnails']],
-		['chamber', 'Chamber', 'bg.chamber', 'Moderator', 'Moderators', '22697a3d-45bf-8dd7-4fec-84a9e28c69d7', '#20435b', 26, 'Antipolo', 2023, ['val', 'cs2'], 'Moderator with style. Calm, polite, and fast with the timeout button.', { discord: 'chamber.bg' }, ['Moderates tournament lobbies']],
-		['deadlock', 'Deadlock', 'bg.deadlock', 'Moderator', 'Moderators', 'cc8b64c8-4b25-4ff9-6e7f-37b4da43d235', '#425495', 27, 'Bacolod', 2024, ['val', 'lol'], 'Locking down raids and keeping channels on topic.', { discord: 'deadlock.bg' }, ['Handles reports and raids']],
-		['vyse', 'Vyse', 'bg.vyse', 'Moderator', 'Moderators', 'efba5359-4016-a1e5-7626-b1ae76895940', '#492280', 23, 'Cagayan de Oro', 2025, ['val', 'ml'], 'Newest mod on the team. Patient with newbies, strict with trolls.', { discord: 'vyse.bg' }, ['Helps new members get verified']]
-	].map(function (r) { return P(r); });
+		{ id: 'felli-bonaksu', n: 'Felli Bonaksu', r: 'Founder', g: 'Leadership', i: '2025/11/ezgif-7433932c8fe2f666.webp' },
+		{ id: 'mj', n: 'MJ', r: 'Operations Manager', g: 'Leadership', i: '2021/01/image.jpg' },
+		{ id: 'neiko', n: 'Neiko', r: 'Chief of Staff / Project Manager', g: 'Leadership', i: '2021/01/neiko.png' },
+		{ id: 'gietech', n: 'Gietech', r: 'Events Manager', g: 'Community', i: '2021/01/gietech.png' },
+		{ id: 'angel', n: 'Angel', r: 'Community Lead', g: 'Community', i: '2025/11/angel-profile-1.jpg' },
+		{ id: 'haze', n: 'Haze', r: 'Community Manager / Head Moderator', g: 'Community', i: '2026/06/image-scaled-e1780484671447.jpg' },
+		{ id: 'kobeni', n: 'Kobeni', r: 'Community Manager', g: 'Community', i: '2021/01/kobs.png' },
+		{ id: 'kyle', n: 'Kyle', r: 'Community Manager', g: 'Community', i: '2021/01/image-7-copy.jpg' },
+		{ id: 'mwai', n: 'Mwai', r: 'Community Manager', g: 'Community', i: '2021/01/mwai-copy.jpg' },
+		{ id: 'yna', n: 'Yna', r: 'Community Manager', g: 'Community', i: '2025/12/yna.png' },
+		{ id: 'jinro', n: 'Jinro', r: 'Community Manager', g: 'Community', i: '2021/01/bonaksu-jinro.jpg' },
+		{ id: 'franz', n: 'Franz', r: 'Production Head', g: 'Production', i: '2026/06/franz.png' },
+		{ id: 'helios', n: 'Helios', r: 'Production Staff', g: 'Production', i: '2026/07/helios.png' },
+		{ id: 'amaris', n: 'Amaris', r: 'Moderator', g: 'Moderators', i: '2026/09/amaris.png' },
+		{ id: 'ayana', n: 'Ayana', r: 'Moderator', g: 'Moderators', i: '2026/09/ayana.png' },
+		// fx: zoom + focus point so the face sits in the middle of the card
+		{ id: 'reiju', n: 'Reiju', r: 'Moderator', g: 'Moderators', i: '2026/09/reiju.png', fx: '--z:1.3;transform-origin:89% 49%' }
+	];
 	var PLAYERS = [
 		['jett', 'Jett', 'jett.ph', 'Duelist', 'BG Pink', 'add6443a-41bd-e414-f6ad-e58d267f4e95', '#25607a', 20, 'Quezon City', 2023, ['val', 'ml'], 'Entry fragger. Dash in, take the space, never look back. Watch your back, or don\'t, you won\'t see me anyway.', { discord: 'jett.ph', x: 'jett_ph', twitch: 'jettph', tiktok: 'jett.ph' }, ['Bonaksu VALORANT Cup S7 · Champion', 'Tournament MVP · 2 times'], 'Radiant'],
 		['reyna', 'Reyna', 'reyna.ph', 'Duelist', 'BG Pink', 'a3bfb853-43b2-7238-a4f1-ad90e9e46bcc', '#662d62', 22, 'Makati', 2023, ['val'], 'Solo queue queen. I play for the clutch and stay for the community.', { discord: 'reyna.ph', instagram: 'reyna.ph', twitch: 'reynaph' }, ['All-Female VALORANT S8 · Champion', 'Most kills · Season 8'], 'Immortal 3'],
@@ -844,25 +847,6 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 		var e = EDITS[m.id] || {};
 		return { n: e.n || m.n, loc: e.loc || m.loc, age: e.age || m.age, bio: e.bio || m.bio, games: e.games && e.games.length ? e.games : m.games, s: e.s || m.s, pfp: e.pfp || '', edited: !!EDITS[m.id] };
 	}
-	var REAL_TEAM = [
-		{ id: 'felli-bonaksu', n: 'Felli Bonaksu', r: 'Founder', g: 'Leadership', i: '2025/11/ezgif-7433932c8fe2f666.webp' },
-		{ id: 'mj', n: 'MJ', r: 'Operations Manager', g: 'Leadership', i: '2021/01/image.jpg' },
-		{ id: 'neiko', n: 'Neiko', r: 'Chief of Staff / Project Manager', g: 'Leadership', i: '2021/01/neiko.png' },
-		{ id: 'gietech', n: 'Gietech', r: 'Events Manager', g: 'Community', i: '2021/01/gietech.png' },
-		{ id: 'angel', n: 'Angel', r: 'Community Lead', g: 'Community', i: '2025/11/angel-profile-1.jpg' },
-		{ id: 'haze', n: 'Haze', r: 'Community Manager / Head Moderator', g: 'Community', i: '2026/06/image-scaled-e1780484671447.jpg' },
-		{ id: 'kobeni', n: 'Kobeni', r: 'Community Manager', g: 'Community', i: '2021/01/kobs.png' },
-		{ id: 'kyle', n: 'Kyle', r: 'Community Manager', g: 'Community', i: '2021/01/image-7-copy.jpg' },
-		{ id: 'mwai', n: 'Mwai', r: 'Community Manager', g: 'Community', i: '2021/01/mwai-copy.jpg' },
-		{ id: 'yna', n: 'Yna', r: 'Community Manager', g: 'Community', i: '2025/12/yna.png' },
-		{ id: 'jinro', n: 'Jinro', r: 'Community Manager', g: 'Community', i: '2021/01/bonaksu-jinro.jpg' },
-		{ id: 'franz', n: 'Franz', r: 'Production Head', g: 'Production', i: '2026/06/franz.png' },
-		{ id: 'helios', n: 'Helios', r: 'Production Staff', g: 'Production', i: '2026/07/helios.png' },
-		{ id: 'amaris', n: 'Amaris', r: 'Moderator', g: 'Moderators', i: '2026/09/amaris.png' },
-		{ id: 'ayana', n: 'Ayana', r: 'Moderator', g: 'Moderators', i: '2026/09/ayana.png' },
-		// fx: zoom + focus point so the face sits in the middle of the card
-		{ id: 'reiju', n: 'Reiju', r: 'Moderator', g: 'Moderators', i: '2026/09/reiju.png', fx: '--z:1.3;transform-origin:89% 49%' }
-	];
 	var PARTNERS = [
 		['partner-logo1-copy.jpg', 'The Doge Pound'], ['partner-logo2-copy.jpg', 'Doge Pound City'], ['partner-logo7-copy.jpg', 'Partner'],
 		['partner-logo11.jpg', 'Partner'], ['partner-logo12-copy.jpg', 'Redragon'], ['partner-logo13-copy.jpg', 'Partner'],
@@ -890,6 +874,10 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 	// if an image fails, show the initial instead of a broken picture
 	var NOIMG = 'onerror="this.parentNode.classList.add(\'ini\');this.remove()"';
 	function tcard(m, d) {
+		if (!m.pl) {
+			return '<a class="tcard rv" style="--d:' + (d || 0) + 'ms" href="' + phref(m) + '"><div class="ph" data-i="' + esc(m.n.charAt(0)) + '"><img src="' + IMG + m.i + '" alt="' + esc(m.n) + '" loading="lazy"' + (m.fx ? ' style="' + m.fx + '"' : '') + ' ' + NOIMG + '></div><span class="lv">' + m.g + '</span>' +
+				'<div class="tb"><span class="role">' + esc(m.r) + '</span><h3>' + esc(m.n) + '</h3></div><span class="go">' + ARROW + '</span></a>';
+		}
 		var p = prof(m);
 		var ph = p.pfp ? '<div class="ph" data-i="' + esc(p.n.charAt(0)) + '"><img src="' + p.pfp + '" alt="' + esc(p.n) + '" ' + NOIMG + '></div>'
 			: '<div class="ph ag" data-i="' + esc(p.n.charAt(0)) + '" style="--ac:' + m.c + ';--art:url(' + AG + m.u + '/background.png)"><img src="' + AG + m.u + '/fullportrait.png" alt="' + esc(p.n) + '" loading="lazy" ' + NOIMG + '></div>';
@@ -987,11 +975,29 @@ textarea.inp{height:130px;padding:14px 16px;resize:vertical}
 			'<div class="tgrid" id="tgrid">' + TEAM.map(function (m, i) { return tcard(m, (i % 4) * 80); }).join('') + '</div></div></section>' +
 			'<section class="sec tight"><div class="wrap"><div class="band rv"><span class="wordbg">JOIN</span><div class="inner"><div><span class="k">Join our team</span><h2>Want to be <em>part of it?</em></h2><p>We are always looking for moderators, casters, and production staff who love the community. Reach out on Discord.</p></div><a class="btn" href="https://discord.gg/bonaksu" target="_blank" rel="noopener">Message us on Discord</a></div></div></div></section>';
 	};
-	/* social-style profile, shared by staff (#/team/id) and community players (#/players/id) */
+	/* staff profile (the original page Lynde approved) */
+	function staffPage(m) {
+		var felli = m.id === 'felli-bonaksu';
+		var others = TEAM.filter(function (t) { return t.g === m.g && t.id !== m.id; }).slice(0, 4);
+		if (others.length < 4) { others = others.concat(TEAM.filter(function (t) { return t.g !== m.g; }).slice(0, 4 - others.length)); }
+		return phead(m.n.split(' ')[0].toUpperCase(), esc(m.r), esc(m.n), '<a href="#/team">Team</a> / ' + esc(m.n)) +
+			'<section class="sec"><div class="wrap prof"><div class="pcardbig rv l"><div class="ph"><img src="' + IMG + m.i + '" alt="' + esc(m.n) + '"></div><div class="pb"><span class="k">' + esc(m.r) + '</span><h2 style="font-size:30px;margin:10px 0 18px">' + esc(m.n) + '</h2><div class="socials">' + socials(felli ? ['facebook', 'x', 'youtube'] : ['discord']) + '</div></div></div>' +
+			'<div><span class="k rv">' + (felli ? 'Founder of Bonaksu Gaming' : m.g + ' team') + '</span><h2 class="rv" style="--d:80ms">' + (felli ? 'Where it <em>all started</em>' : esc(m.n) + ' <em>· ' + esc(m.r) + '</em>') + '</h2>' +
+			(felli ? '<p class="lead rv" style="--d:160ms">Felli Bonaksu is the founder of Bonaksu Gaming. What began as a small GTA 5 roleplay group for her and her friends soon grew into a thriving community, drawing in players who shared the same passion for gaming.</p><p class="mu rv" style="--d:220ms">From there, she envisioned creating a space where gamers could connect, support one another, and enjoy their shared interests together. Through her leadership, Bonaksu Gaming has become more than just a place to play: it\'s a community built on friendship, fun, and a shared love for gaming.</p>' +
+				'<div class="infobox rv" style="--d:260ms"><div><span>Role</span><b>Founder</b></div><div><span>Main game</span><b>VALORANT</b></div><div><span>Community</span><b>300K+ gamers</b></div></div>' +
+				'<h3 class="rv" style="margin-top:40px;font-size:16px">Games played</h3><div class="games rv">' + [['VALORANT', 100], ['Survival games', 80], ['Single-player', 65]].map(function (g) { return '<div class="game"><div class="top"><span>' + g[0] + '</span><b>' + g[1] + '%</b></div><div class="bar"><i data-w="' + g[1] + '%"></i></div></div>'; }).join('') + '</div>' +
+				'<div class="buyrow rv"><a class="btn" href="' + SOC.youtube + '" target="_blank" rel="noopener">Watch on YouTube</a><a class="btn o" href="' + SOC.discord + '" target="_blank" rel="noopener">Join the Discord</a></div>'
+				: '<p class="lead rv" style="--d:160ms">' + esc(m.n) + ' is part of the ' + m.g.toLowerCase() + ' team at Bonaksu Gaming, helping run tournaments, events, and the community every day.</p>' +
+				'<div class="infobox rv" style="--d:240ms"><div><span>Role</span><b>' + esc(m.r) + '</b></div><div><span>Team</span><b>' + m.g + '</b></div><div><span>Community</span><b>Bonaksu Gaming</b></div></div>' +
+				'<div class="buyrow rv"><a class="btn" href="' + SOC.discord + '" target="_blank" rel="noopener">Say hi on Discord</a><a class="btn o" href="#/team">Back to the team</a></div>') +
+			'<h3 class="rv" style="margin:50px 0 20px;font-size:16px">More from the team</h3><div class="tgrid">' + others.map(function (o, i) { return tcard(o, i * 70); }).join('') + '</div></div></div></section>';
+	}
+	/* social-style profile for community players (#/players/id) */
 	V.member = function (id) {
 		var m = PEOPLE.filter(function (t) { return t.id === id; })[0];
 		if (!m) { return V.notfound(); }
-		var p = prof(m), list = m.pl ? PLAYERS : TEAM;
+		if (!m.pl) { return staffPage(m); }
+		var p = prof(m), list = PLAYERS;
 		var others = list.filter(function (t) { return t.g === m.g && t.id !== m.id; }).slice(0, 4);
 		if (others.length < 4) { others = others.concat(list.filter(function (t) { return t.g !== m.g && t.id !== m.id; }).slice(0, 4 - others.length)); }
 		var av = p.pfp || AG + m.u + '/displayicon.png';
